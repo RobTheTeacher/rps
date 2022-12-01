@@ -19,15 +19,6 @@
 4.   Display who won
 */
 
-function loadDoc() {
-  const xhttp = new XMLHttpRequest();
-  xhttp.onload = function() {
-    document.getElementById("demo").innerHTML = this.responseText;
-  }
-  xhttp.open("GET", "ajax_info.txt");
-  xhttp.send();
-}
-
 function computerSelection() {
   let choices = ["rock", "paper", "scissors"];
   return choices[Math.floor(Math.random() * choices.length)];
@@ -83,5 +74,5 @@ function playGame() {
     alert(result);
 }
 
-console.log("\u270C");
+playGame();
 
